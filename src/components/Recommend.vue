@@ -11,7 +11,7 @@
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
           <p class="item-desc">
-            {{ item.desc }}
+            {{ item.address }}
           </p>
           <button class="item-btn">查看详情</button>
         </div>
@@ -23,32 +23,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            '//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg',
-          title: '北京当地游1天跟团游',
-          desc: '北京故宫深度半日游｜上午下午2班可选｜纯玩0购物｜全景游'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            '//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg',
-          title: '北京当地游1天跟团游',
-          desc: '北京故宫深度半日游｜上午下午2班可选｜纯玩0购物｜全景游'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            '//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg',
-          title: '北京当地游1天跟团游',
-          desc: '北京故宫深度半日游｜上午下午2班可选｜纯玩0购物｜全景游'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
