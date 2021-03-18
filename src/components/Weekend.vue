@@ -2,11 +2,7 @@
   <div class="recommend">
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li
-        class="item border-bottom"
-        v-for="item of recommendList"
-        :key="item.id"
-      >
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -24,32 +20,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data() {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/tts9/1611/48/a0aa0ab732239402.jpg_r_480x320x95_8058890b.jpg',
-          title: '北京当地游1天跟团游',
-          desc: '北京故宫深度半日游｜上午下午2班可选｜纯玩0购物｜全景游'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/tts9/1611/48/a0aa0ab732239402.jpg_r_480x320x95_8058890b.jpg',
-          title: '北京当地游1天跟团游',
-          desc: '北京故宫深度半日游｜上午下午2班可选｜纯玩0购物｜全景游'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/tts9/1611/48/a0aa0ab732239402.jpg_r_480x320x95_8058890b.jpg',
-          title: '北京当地游1天跟团游',
-          desc: '北京故宫深度半日游｜上午下午2班可选｜纯玩0购物｜全景游'
-        }
-      ]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>
@@ -64,7 +36,7 @@ export default {
 .item-img-wrapper
   overflow hidden
   height 0
-  padding-bottom 33.9%
+  padding-bottom 37.09%
   .item-img
     width 100%
 .item-info
