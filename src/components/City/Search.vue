@@ -14,6 +14,7 @@
           class="search-item border-bottom"
           v-for="item of result"
           :key="item.id"
+          @click="HandleChangeCity(item.name)"
         >
           {{ item.name }}
         </li>
@@ -27,6 +28,7 @@
 
 <script>
 import BetterScroll from 'better-scroll'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'CitySearch',
@@ -39,6 +41,13 @@ export default {
       result: [],
       timer: null
     }
+  },
+  methods: {
+    HandleChangeCity(city) {
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
   },
   computed: {
     hasNoResult() {
