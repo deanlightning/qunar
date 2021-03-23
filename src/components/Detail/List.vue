@@ -1,9 +1,9 @@
 <template>
   <div class="list">
-    <div class="item" v-for="(item, index) of detailList" :key="index">
+    <div class="item" v-for="(item, index) of priceType" :key="index">
       <div class="item-title border-bottom">
         <span class="item-title-icon"></span>
-        {{ item.title }}
+        {{ item.name }}
       </div>
       <div class="item-children" v-if="item.children">
         <detail-list :detailList="item.children"></detail-list>
@@ -16,7 +16,7 @@
 export default {
   name: 'DetailList',
   props: {
-    detailList: Array
+    priceType: Array
   }
 }
 </script>
