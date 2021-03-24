@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     getCityInfo() {
-      axios.get('/mock/city.json').then(this.getCityInfoSucc)
+      axios.get('../../public/mock/city.json').then(this.getCityInfoSucc)
     },
     getCityInfoSucc(res) {
       res = res.data
