@@ -9,13 +9,11 @@ import './assets/style/reset.css'
 import './assets/style/border.css'
 import './assets/style/iconfont.css'
 import 'swiper/swiper-bundle.css'
-import axios from 'axios'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 Swiper2.use([Navigation, Pagination])
-axios.defaults.baseURL = 'https://github.com/deanlightning/qunar/tree/main/public/'
 
 new Vue({
   router,
