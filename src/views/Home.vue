@@ -14,7 +14,7 @@ import HomeSwiper from '../components/Home/Swiper'
 import HomeIcons from '../components/Home/Icons'
 import HomeRecommend from '../components/Home/Recommend'
 import HomeWeekend from '../components/Home/Weekend'
-import axios from 'axios'
+// import axios from 'axios'
 import { mapState } from 'vuex'
 
 export default {
@@ -40,22 +40,21 @@ export default {
   },
   mounted() {
     this.lastCity = this.city
-    this.getHomeInfo()
+    this.getHomeInfoSucc()
   },
   activated() {
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
-      this.getHomeInfo()
+      this.getHomeInfoSucc()
     }
   },
   methods: {
     getHomeInfo() {
-      axios
-        .get('../../public/mock/index.json?city=' + this.city)
-        .then(this.getHomeInfoSucc)
+      // axios.get('/mock/index.json?city=' + this.city).then(this.getHomeInfoSucc)
     },
-    getHomeInfoSucc(res) {
-      res = res.data
+    getHomeInfoSucc() {
+      let res = require('../../public/mock/index.json')
+      // res = res.data
       if (res.ret && res.data) {
         const data = res.data
         this.swiperList = data.swiperList

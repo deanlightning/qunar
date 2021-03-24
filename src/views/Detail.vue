@@ -16,7 +16,7 @@
 import DetailBanner from '../components/Detail/Banner'
 import DetailHeader from '../components/Detail/Header'
 import DetailList from '../components/Detail/List'
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   name: 'Detail',
@@ -35,21 +35,22 @@ export default {
     }
   },
   mounted() {
-    this.getDetailInfo()
+    this.getDetailInfoSucc()
   },
   methods: {
     getDetailInfo() {
-      axios
-        .get('../../public/mock/detail.json', {
-          params: {
-            id: this.$route.params.id
-          }
-        })
-        .then(this.getDetailInfoSucc)
+      // axios
+      //   .get('/mock/detail.json', {
+      //     params: {
+      //       id: this.$route.params.id
+      //     }
+      //   })
+      //   .then(this.getDetailInfoSucc)
     },
-    getDetailInfoSucc(res) {
+    getDetailInfoSucc() {
+      let res = require('../../public/mock/detail.json')
       this.detailId = Number(this.$route.params.id) - 1
-      res = res.data
+      // res = res.data
       if (res.ret && res.data) {
         const data = res.data
         this.sightName = data[this.detailId].sightName

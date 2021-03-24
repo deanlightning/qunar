@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 import CityHeader from '../components/City/Header'
 import CitySearch from '../components/City/Search'
 import CityList from '../components/City/List'
@@ -37,14 +37,15 @@ export default {
     }
   },
   mounted() {
-    this.getCityInfo()
+    this.getCityInfoSucc()
   },
   methods: {
     getCityInfo() {
-      axios.get('../../public/mock/city.json').then(this.getCityInfoSucc)
+      // axios.get('/mock/city.json').then(this.getCityInfoSucc)
     },
-    getCityInfoSucc(res) {
-      res = res.data
+    getCityInfoSucc() {
+      let res = require('../../public/mock/city.json')
+      // res = res.data
       if (res.ret && res.data) {
         const data = res.data
         this.cities = data.cities
