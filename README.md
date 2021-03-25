@@ -13,4 +13,4 @@
 
 [项目预览](https://deanlightning.github.io/qunar/#/)
 
-(https://github.com/deanlightning/qunar/blob/main/public/preview.jpg)
+(https://github.com/deanlightning/qunar/blob/main/)
