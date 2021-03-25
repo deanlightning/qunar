@@ -13,4 +13,4 @@
 
 [项目预览](https://deanlightning.github.io/qunar/#/)
 
-(./docs/preview.jpg)
+![Preview](./docs/preview.jpg)
