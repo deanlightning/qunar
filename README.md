@@ -1,24 +1,16 @@
-# qunar
+# Qunar Vue Demo
 
-## Project setup
-```
-npm install
-```
+## 技术栈
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+:hammer: Vue
+:hammer: Vuex
+:hammer: Vue Router
+:hammer: vue-awesome-swiper
+:hammer: better-scroll
+:hammer: Axios
+:hammer: Stylus
+:hammer: fastclick
 
-### Compiles and minifies for production
-```
-npm run build
-```
+[项目预览](https://deanlightning.github.io/qunar/#/)
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+(https://github.com/deanlightning/qunar/blob/main/public/preview.jpg)
